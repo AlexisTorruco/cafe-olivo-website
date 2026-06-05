@@ -44,10 +44,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link
-              href="/#ubicacion"
-              className="transition hover:text-[#4F6F2A]"
-            >
+            <Link href="#ubicacion" className="transition hover:text-[#4F6F2A]">
               Ubicación
             </Link>
           </li>
@@ -91,7 +88,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/#ubicacion" onClick={closeMenu}>
+              <Link href="#ubicacion" onClick={closeMenu}>
                 Ubicación
               </Link>
             </li>

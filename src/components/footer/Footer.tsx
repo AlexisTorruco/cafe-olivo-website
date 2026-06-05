@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaInstagram,
   FaFacebookF,
@@ -10,10 +11,19 @@ export default function Footer() {
     <footer className="bg-[#1F3D1B] px-4 py-12 text-white md:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
-          <h2 className="mb-4 text-2xl font-extrabold">Olivo</h2>
+          {/* <h2 className="mb-4 text-2xl font-extrabold">Olivo</h2> */}
+          <Link href="/">
+            <img
+              src="/images/logo.png"
+              width={180}
+              height={180}
+              alt="Cafetería Olivo"
+              className="h-14 w-auto md:h-20 mb-4"
+            />
+          </Link>
+
           <p className="max-w-[220px] text-sm leading-relaxed text-white/80">
-            Café restaurante con sabor, calidad e ingredientes frescos en cada
-            platillo.
+            Sabor, calidad e ingredientes frescos en cada visita.
           </p>
         </div>
 
@@ -96,7 +106,7 @@ export default function Footer() {
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-4 border-t border-white/20 pt-6 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} Cafetería Olivo. Todos los derechos
-          reservados.
+          reservados. Huimanguillo, Tabasco
         </p>
 
         {/* <div className="flex gap-4">
