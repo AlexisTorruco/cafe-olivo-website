@@ -32,7 +32,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/#promociones"
+              href="/promotions"
               className="transition hover:text-[#4F6F2A]"
             >
               Promociones
@@ -78,7 +78,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/#promociones" onClick={closeMenu}>
+              <Link href="/promotions" onClick={closeMenu}>
                 Promociones
               </Link>
             </li>

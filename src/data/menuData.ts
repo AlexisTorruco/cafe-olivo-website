@@ -8,8 +8,8 @@ export type MenuCategory =
   | "Bebidas calientes"
   | "Bebidas frías"
   | "Frappés"
-  | "Smoothies"
-  | "Extras";
+  | "Smoothies";
+// | "Extras";
 
 export type MenuItem = {
   id: number;
@@ -21,6 +21,14 @@ export type MenuItem = {
   isRecommended?: boolean;
   isFavorite?: boolean;
   isNew?: boolean;
+  extraGroup?: "food" | "drink";
+};
+
+export type MenuExtra = {
+  id: number;
+  group: "food" | "drink";
+  name: string;
+  price: number;
 };
 
 export const menuCategories: MenuCategory[] = [
@@ -34,7 +42,7 @@ export const menuCategories: MenuCategory[] = [
   "Bebidas frías",
   "Frappés",
   "Smoothies",
-  "Extras",
+  // "Extras",
 ];
 
 export const menuItems: MenuItem[] = [
@@ -45,6 +53,7 @@ export const menuItems: MenuItem[] = [
     name: "Avocado Toast",
     description: "Pan tostado con guacamole servido con pico de gallo.",
     price: 120,
+    extraGroup: "food",
   },
   {
     id: 2,
@@ -53,6 +62,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Bañadas en salsa verde o roja, media crema, queso gratinado, cebolla y cilantro.",
     price: 140,
+    extraGroup: "food",
     isFavorite: true,
     image: "/images/menu/enchiladas-suizas.png",
   },
@@ -62,6 +72,7 @@ export const menuItems: MenuItem[] = [
     name: "Enchiladas suizas Olivo",
     description: "Bañadas en crema poblana, queso gratinado, elote y cilantro.",
     price: 145,
+    extraGroup: "food",
     isNew: true,
   },
   {
@@ -71,6 +82,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Totopos sobre un espejo de frijoles con chipotle, bañados con salsa verde o roja, crema, queso, aguacate, cebolla y cilantro.",
     price: 120,
+    extraGroup: "food",
     isFavorite: true,
     image: "/images/menu/chilaquiles.png",
   },
@@ -81,6 +93,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Totopos sobre un espejo de frijoles con chipotle, bañados con salsa roja asada, longaniza, trocitos de plátano, crema, queso, aguacate, cebolla y cilantro, coronado con un huevo estrellado.",
     price: 155,
+    extraGroup: "food",
     isNew: true,
   },
   {
@@ -90,6 +103,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Jamón, tocino, a la mexicana o espinacas. Acompañados con frijoles, pan tostado o tortillas.",
     price: 130,
+    extraGroup: "food",
   },
   {
     id: 7,
@@ -98,6 +112,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Huevos estrellados sobre tortillas doradas con frijoles, bañados en salsa roja o verde, jamón picado, crema, queso y aguacate.",
     price: 140,
+    extraGroup: "food",
   },
   {
     id: 8,
@@ -106,6 +121,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Huevos revueltos con cecina, bañados en salsa verde, servidos con tortillas, frijoles y aguacate.",
     price: 160,
+    extraGroup: "food",
     isRecommended: true,
   },
   {
@@ -115,6 +131,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Pan brioche con frijoles y queso gratinado. Servidos con pico de gallo y aderezo de chipotle.",
     price: 120,
+    extraGroup: "food",
     isRecommended: true,
     image: "/images/menu/molletes-con-cecina.png",
   },
@@ -124,6 +141,7 @@ export const menuItems: MenuItem[] = [
     name: "Pan francés",
     description: "Servido con fresas y miel maple.",
     price: 135,
+    extraGroup: "food",
     image: "/images/menu/pan-frances-maple-fresa.png",
   },
 
@@ -135,6 +153,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Base de lechuga, tomate, cebolla, aguacate y germinado; acompañado de papas y aderezo.",
     price: 130,
+    extraGroup: "food",
   },
   {
     id: 12,
@@ -143,6 +162,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Base de lechuga, tomate, cebolla, aguacate y germinado; acompañado de papas y aderezo.",
     price: 125,
+    extraGroup: "food",
   },
   {
     id: 13,
@@ -151,6 +171,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Base de lechuga, tomate, cebolla, aguacate y germinado; acompañado de papas y aderezo.",
     price: 150,
+    extraGroup: "food",
   },
   {
     id: 14,
@@ -159,6 +180,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Base de lechuga, tomate, cebolla, aguacate y germinado; acompañado de papas y aderezo.",
     price: 135,
+    extraGroup: "food",
     isFavorite: true,
   },
 
@@ -170,6 +192,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Lechuga, 150gr pechuga a la plancha, crutones, queso parmesano y aderezo César.",
     price: 130,
+    extraGroup: "food",
   },
   {
     id: 16,
@@ -178,6 +201,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Lechuga, 150gr pechuga a la plancha, queso panela, tocino, crutones y aderezo mostaza miel.",
     price: 135,
+    extraGroup: "food",
     isRecommended: true,
     image: "/images/menu/ensalada-2.png",
   },
@@ -188,6 +212,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Lechuga, espinacas, 150gr pechuga a la plancha, fresas, aguacate, almendras y vinagreta balsámica.",
     price: 140,
+    extraGroup: "food",
     isFavorite: true,
   },
   {
@@ -197,6 +222,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Lechuga, espinacas, 150gr pechuga a la plancha, manzana verde, nueces, arándanos y aderezo mostaza dulce.",
     price: 140,
+    extraGroup: "food",
   },
 
   // SÁNDWICHES
@@ -207,6 +233,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Sándwich salado dulce con jamón y queso mozzarella, espolvoreado con azúcar glass y servido con mermelada de fresa y fresas naturales.",
     price: 145,
+    extraGroup: "food",
   },
   {
     id: 20,
@@ -215,6 +242,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Sándwich de jamón y queso, bañados en una salsa de queso y coronado con un huevo estrellado; acompañado de ensalada.",
     price: 145,
+    extraGroup: "food",
   },
   {
     id: 21,
@@ -223,6 +251,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Sándwich tostado con queso Philadelphia, queso mozzarella y jamón; servido con papitas y aderezo.",
     price: 145,
+    extraGroup: "food",
     isFavorite: true,
   },
   {
@@ -232,6 +261,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Sándwich con 2 huevos revueltos con tocino, servido con queso mozzarella y aguacate; servido con papitas y aderezo.",
     price: 140,
+    extraGroup: "food",
     isRecommended: true,
   },
   {
@@ -241,6 +271,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Sándwich a base de lechuga, tomate, cebolla, aguacate, germinado; acompañado de papitas y aderezo.",
     price: 140,
+    extraGroup: "food",
   },
 
   // TACOS Y ESPECIALES
@@ -251,6 +282,7 @@ export const menuItems: MenuItem[] = [
     description:
       "5 tacos servidos con guacamole, cebolla asada y acompañado de pico de gallo y aderezo de ajo.",
     price: 195,
+    extraGroup: "food",
     isFavorite: true,
   },
   {
@@ -260,6 +292,7 @@ export const menuItems: MenuItem[] = [
     description:
       "5 tacos de pollo pastor, servidos con piña asada y acompañado de cebolla con cilantro y aderezo de ajo.",
     price: 145,
+    extraGroup: "food",
     isRecommended: true,
   },
   {
@@ -269,6 +302,7 @@ export const menuItems: MenuItem[] = [
     description:
       "5 tacos de pollo con alambre gratinado y servidos con pico de gallo y aderezo de ajo.",
     price: 160,
+    extraGroup: "food",
     isNew: true,
   },
   {
@@ -278,6 +312,7 @@ export const menuItems: MenuItem[] = [
     description:
       "150gr de cecina sobre tortillas doradas gratinadas con queso y coronadas con aguacate; servido con pico de gallo y aderezo de ajo.",
     price: 160,
+    extraGroup: "food",
     isFavorite: true,
   },
   {
@@ -287,6 +322,7 @@ export const menuItems: MenuItem[] = [
     description:
       "Tortillas doradas y gratinadas con queso, servidas con aguacate, pico de gallo y aderezo de ajo.",
     price: 145,
+    extraGroup: "food",
     isNew: true,
   },
   {
@@ -294,6 +330,7 @@ export const menuItems: MenuItem[] = [
     category: "Tacos y especiales",
     name: "Cecina con chilaquiles, frijoles y aguacate",
     price: 250,
+    extraGroup: "food",
     isNew: true,
   },
   {
@@ -301,75 +338,258 @@ export const menuItems: MenuItem[] = [
     category: "Tacos y especiales",
     name: "Pollo a la plancha con ensalada y aguacate",
     price: 190,
+    extraGroup: "food",
     isNew: true,
   },
 
   // AGUAS Y REFRESCOS
-  { id: 31, category: "Aguas y refrescos", name: "Jamaica", price: 35 },
-  { id: 32, category: "Aguas y refrescos", name: "Jamaica fresa", price: 40 },
-  { id: 33, category: "Aguas y refrescos", name: "Limonada", price: 35 },
-  { id: 34, category: "Aguas y refrescos", name: "Limonada fresa", price: 40 },
-  { id: 35, category: "Aguas y refrescos", name: "Jamaica piña", price: 40 },
-  { id: 36, category: "Aguas y refrescos", name: "Maracuyá", price: 35 },
-  { id: 37, category: "Aguas y refrescos", name: "Horchata", price: 35 },
-  { id: 38, category: "Aguas y refrescos", name: "Polvillo", price: 35 },
-  { id: 39, category: "Aguas y refrescos", name: "Coca-Cola 600ml", price: 35 },
-  { id: 40, category: "Aguas y refrescos", name: "Agua selva", price: 30 },
+  {
+    id: 31,
+    category: "Aguas y refrescos",
+    name: "Jamaica",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 32,
+    category: "Aguas y refrescos",
+    name: "Jamaica fresa",
+    price: 40,
+    extraGroup: "drink",
+  },
+  {
+    id: 33,
+    category: "Aguas y refrescos",
+    name: "Limonada",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 34,
+    category: "Aguas y refrescos",
+    name: "Limonada fresa",
+    price: 40,
+    extraGroup: "drink",
+  },
+  {
+    id: 35,
+    category: "Aguas y refrescos",
+    name: "Jamaica piña",
+    price: 40,
+    extraGroup: "drink",
+  },
+  {
+    id: 36,
+    category: "Aguas y refrescos",
+    name: "Maracuyá",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 37,
+    category: "Aguas y refrescos",
+    name: "Horchata",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 38,
+    category: "Aguas y refrescos",
+    name: "Polvillo",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 39,
+    category: "Aguas y refrescos",
+    name: "Coca-Cola 600ml",
+    price: 35,
+  },
+  {
+    id: 40,
+    category: "Aguas y refrescos",
+    name: "Agua selva",
+    price: 30,
+  },
   {
     id: 41,
     category: "Aguas y refrescos",
     name: "Sodas italianas 475ml",
     description: "Bebida mineralizada de fresa, maracuyá o piña menta.",
     price: 65,
+    extraGroup: "drink",
     isRecommended: true,
     image: "/images/menu/soda-italiana-piña-menta.png",
   },
 
   // BEBIDAS CALIENTES
-  { id: 42, category: "Bebidas calientes", name: "Café americano", price: 35 },
-  { id: 43, category: "Bebidas calientes", name: "Café de olla", price: 40 },
-  { id: 44, category: "Bebidas calientes", name: "Lechero", price: 60 },
-  { id: 45, category: "Bebidas calientes", name: "Capuchino", price: 60 },
-  { id: 46, category: "Bebidas calientes", name: "Chai", price: 65 },
-  { id: 47, category: "Bebidas calientes", name: "Chocolate", price: 65 },
-  { id: 48, category: "Bebidas calientes", name: "Moka", price: 65 },
-  { id: 49, category: "Bebidas calientes", name: "Caramel", price: 65 },
-  { id: 50, category: "Bebidas calientes", name: "Tisana", price: 65 },
+  {
+    id: 42,
+    category: "Bebidas calientes",
+    name: "Café americano",
+    price: 35,
+    extraGroup: "drink",
+  },
+  {
+    id: 43,
+    category: "Bebidas calientes",
+    name: "Café de olla",
+    price: 40,
+    extraGroup: "drink",
+  },
+  {
+    id: 44,
+    category: "Bebidas calientes",
+    name: "Lechero",
+    price: 60,
+    extraGroup: "drink",
+  },
+  {
+    id: 45,
+    category: "Bebidas calientes",
+    name: "Capuchino",
+    price: 60,
+    extraGroup: "drink",
+  },
+  {
+    id: 46,
+    category: "Bebidas calientes",
+    name: "Chai",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 47,
+    category: "Bebidas calientes",
+    name: "Chocolate",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 48,
+    category: "Bebidas calientes",
+    name: "Moka",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 49,
+    category: "Bebidas calientes",
+    name: "Caramel",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 50,
+    category: "Bebidas calientes",
+    name: "Tisana",
+    price: 65,
+    extraGroup: "drink",
+  },
 
   // BEBIDAS FRÍAS
-  { id: 51, category: "Bebidas frías", name: "Chocolate", price: 65 },
-  { id: 52, category: "Bebidas frías", name: "Moka", price: 65 },
-  { id: 53, category: "Bebidas frías", name: "Caramel", price: 65 },
-  { id: 54, category: "Bebidas frías", name: "Capuchino", price: 60 },
-  { id: 55, category: "Bebidas frías", name: "Chai", price: 65 },
-  { id: 56, category: "Bebidas frías", name: "Dalgona", price: 65 },
-  { id: 57, category: "Bebidas frías", name: "Tisana", price: 65 },
-  { id: 58, category: "Bebidas frías", name: "Capuchino canela", price: 60 },
-  { id: 59, category: "Bebidas frías", name: "Capuchino avellana", price: 65 },
+  {
+    id: 51,
+    category: "Bebidas frías",
+    name: "Chocolate",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 52,
+    category: "Bebidas frías",
+    name: "Moka",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 53,
+    category: "Bebidas frías",
+    name: "Caramel",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 54,
+    category: "Bebidas frías",
+    name: "Capuchino",
+    price: 60,
+    extraGroup: "drink",
+  },
+  {
+    id: 55,
+    category: "Bebidas frías",
+    name: "Chai",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 56,
+    category: "Bebidas frías",
+    name: "Dalgona",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 57,
+    category: "Bebidas frías",
+    name: "Tisana",
+    price: 65,
+    extraGroup: "drink",
+  },
+  {
+    id: 58,
+    category: "Bebidas frías",
+    name: "Capuchino canela",
+    price: 60,
+    extraGroup: "drink",
+  },
+  {
+    id: 59,
+    category: "Bebidas frías",
+    name: "Capuchino avellana",
+    price: 65,
+    extraGroup: "drink",
+  },
   {
     id: 60,
     category: "Bebidas frías",
     name: "Café irlandés",
     price: 75,
+    extraGroup: "drink",
     isNew: true,
   },
 
   // FRAPPÉS
-  { id: 61, category: "Frappés", name: "Chocolate", price: 75 },
-  { id: 62, category: "Frappés", name: "Moka", price: 85 },
+  {
+    id: 61,
+    category: "Frappés",
+    name: "Chocolate",
+    price: 75,
+    extraGroup: "drink",
+  },
+  { id: 62, category: "Frappés", name: "Moka", price: 85, extraGroup: "drink" },
   {
     id: 63,
     category: "Frappés",
     name: "Caramel",
     price: 85,
+    extraGroup: "drink",
     image: "/images/menu/frappe-caramel-3.png",
   },
-  { id: 64, category: "Frappés", name: "Capuchino", price: 75 },
+  {
+    id: 64,
+    category: "Frappés",
+    name: "Capuchino",
+    price: 75,
+    extraGroup: "drink",
+  },
   {
     id: 65,
     category: "Frappés",
     name: "Mazapán",
     price: 85,
+    extraGroup: "drink",
     image: "/images/menu/frappe-mazapan.png",
   },
   {
@@ -377,14 +597,46 @@ export const menuItems: MenuItem[] = [
     category: "Frappés",
     name: "Avellana",
     price: 85,
+    extraGroup: "drink",
     isRecommended: true,
     image: "/images/menu/frappe-avellana-2.png",
   },
-  { id: 67, category: "Frappés", name: "Oreo", price: 85, isNew: true },
-  { id: 68, category: "Frappés", name: "Horchata", price: 70 },
-  { id: 69, category: "Frappés", name: "Polvillo", price: 70 },
-  { id: 70, category: "Frappés", name: "Pozol con cacahuate", price: 70 },
-  { id: 71, category: "Frappés", name: "Pozol con chocolate", price: 85 },
+  {
+    id: 67,
+    category: "Frappés",
+    name: "Oreo",
+    price: 85,
+    extraGroup: "drink",
+    isNew: true,
+  },
+  {
+    id: 68,
+    category: "Frappés",
+    name: "Horchata",
+    price: 70,
+    extraGroup: "drink",
+  },
+  {
+    id: 69,
+    category: "Frappés",
+    name: "Polvillo",
+    price: 70,
+    extraGroup: "drink",
+  },
+  {
+    id: 70,
+    category: "Frappés",
+    name: "Pozol con cacahuate",
+    price: 70,
+    extraGroup: "drink",
+  },
+  {
+    id: 71,
+    category: "Frappés",
+    name: "Pozol con chocolate",
+    price: 85,
+    extraGroup: "drink",
+  },
 
   // SMOOTHIES
   {
@@ -394,17 +646,19 @@ export const menuItems: MenuItem[] = [
     description:
       "Sabores: manzana-avena, fresa-plátano, plátano-cacahuate, plátano-avellana, plátano-moras, mango-maracuyá, piña-coco, fresa-coco.",
     price: 110,
+    extraGroup: "drink",
   },
+];
 
-  // EXTRAS
-  { id: 73, category: "Extras", name: "Pollo", price: 25 },
-  { id: 74, category: "Extras", name: "Queso panela", price: 20 },
-  { id: 75, category: "Extras", name: "Queso mozzarella", price: 25 },
-  { id: 76, category: "Extras", name: "Crutones", price: 15 },
-  { id: 77, category: "Extras", name: "Leche deslactada", price: 10 },
-  { id: 78, category: "Extras", name: "Aderezo", price: 20 },
-  { id: 79, category: "Extras", name: "Huevo", price: 10 },
-  { id: 80, category: "Extras", name: "Cecina", price: 35 },
-  { id: 81, category: "Extras", name: "Leche de coco", price: 15 },
-  { id: 82, category: "Extras", name: "Leche de almendras", price: 15 },
+export const menuExtras: MenuExtra[] = [
+  { id: 73, group: "food", name: "Pollo", price: 25 },
+  { id: 74, group: "food", name: "Queso panela", price: 20 },
+  { id: 75, group: "food", name: "Queso mozzarella", price: 25 },
+  { id: 76, group: "food", name: "Crutones", price: 15 },
+  { id: 77, group: "drink", name: "Leche deslactada", price: 10 },
+  { id: 78, group: "food", name: "Aderezo", price: 20 },
+  { id: 79, group: "food", name: "Huevo", price: 10 },
+  { id: 80, group: "food", name: "Cecina", price: 35 },
+  { id: 81, group: "drink", name: "Leche de coco", price: 15 },
+  { id: 82, group: "drink", name: "Leche de almendras", price: 15 },
 ];

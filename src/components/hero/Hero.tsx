@@ -10,23 +10,40 @@ const heroImages = [
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  const changeImage = (nextIndex: number) => {
+    setIsFading(true);
+
+    setTimeout(() => {
+      setCurrentImage(nextIndex);
+      setIsFading(false);
+    }, 300);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) =>
-        prev === heroImages.length - 1 ? 0 : prev + 1,
-      );
-    }, 3000);
+      const nextIndex =
+        currentImage === heroImages.length - 1 ? 0 : currentImage + 1;
+
+      changeImage(nextIndex);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentImage]);
 
   const nextImage = () => {
-    setCurrentImage((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
+    const nextIndex =
+      currentImage === heroImages.length - 1 ? 0 : currentImage + 1;
+
+    changeImage(nextIndex);
   };
 
   const previousImage = () => {
-    setCurrentImage((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
+    const previousIndex =
+      currentImage === 0 ? heroImages.length - 1 : currentImage - 1;
+
+    changeImage(previousIndex);
   };
 
   return (
@@ -70,20 +87,15 @@ export default function Hero() {
             <img
               src={heroImages[currentImage]}
               alt="Platillo destacado de Cafetería Olivo"
-              className="
-    h-[320px]
-    w-full
-    object-cover
-    md:h-[460px]
-    transition-all
-    duration-700
-  "
+              className={`h-[320px] w-full object-cover transition-all duration-700 ease-in-out md:h-[460px] ${
+                isFading ? "scale-105 opacity-0" : "scale-100 opacity-100"
+              }`}
             />
 
             <button
               type="button"
               onClick={previousImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 font-bold text-[#1F3D1B] shadow"
+              className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-2xl font-bold text-[#1F3D1B] shadow transition hover:bg-white hover:scale-105"
             >
               ‹
             </button>
@@ -91,10 +103,26 @@ export default function Hero() {
             <button
               type="button"
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 font-bold text-[#1F3D1B] shadow"
+              className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-2xl font-bold text-[#1F3D1B] shadow transition hover:bg-white hover:scale-105"
             >
               ›
             </button>
+
+            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => changeImage(index)}
+                  className={`h-2.5 rounded-full transition-all ${
+                    currentImage === index
+                      ? "w-8 bg-white"
+                      : "w-2.5 bg-white/60 hover:bg-white"
+                  }`}
+                  aria-label={`Ver imagen ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

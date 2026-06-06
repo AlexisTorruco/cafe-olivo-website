@@ -26,15 +26,15 @@ export default function Promotions() {
           </p>
 
           <h2 className="text-3xl font-extrabold text-[#1F3D1B] md:text-5xl">
-            Lo más destacado de Olivo
+            Las mejores ofertas para ti
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {promotions.map((promo) => (
             <article
               key={promo.title}
-              className="rounded-3xl bg-[#F7F1E3] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="min-w-[280px] rounded-3xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl md:min-w-0"
             >
               <span className="mb-4 inline-block rounded-full bg-[#4F6F2A] px-4 py-1 text-sm font-bold text-white">
                 {promo.tag}
