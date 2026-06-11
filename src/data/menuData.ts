@@ -54,6 +54,7 @@ export const menuItems: MenuItem[] = [
     description: "Pan tostado con guacamole servido con pico de gallo.",
     price: 120,
     extraGroup: "food",
+    image: "/images/menu/avocado-toast.png",
   },
   {
     id: 2,
@@ -74,6 +75,7 @@ export const menuItems: MenuItem[] = [
     price: 145,
     extraGroup: "food",
     isNew: true,
+    image: "/images/menu/enchiladas-suizas-olivo.png",
   },
   {
     id: 4,
@@ -95,6 +97,7 @@ export const menuItems: MenuItem[] = [
     price: 155,
     extraGroup: "food",
     isNew: true,
+    image: "/images/menu/chilaquiles-olivo.png",
   },
   {
     id: 6,
@@ -113,6 +116,7 @@ export const menuItems: MenuItem[] = [
       "Huevos estrellados sobre tortillas doradas con frijoles, bañados en salsa roja o verde, jamón picado, crema, queso y aguacate.",
     price: 140,
     extraGroup: "food",
+    image: "/images/menu/huevos-rancheros.png",
   },
   {
     id: 8,
@@ -123,6 +127,7 @@ export const menuItems: MenuItem[] = [
     price: 160,
     extraGroup: "food",
     isRecommended: true,
+    image: "/images/menu/huevos-al-albanil.png",
   },
   {
     id: 9,
@@ -193,6 +198,7 @@ export const menuItems: MenuItem[] = [
       "Lechuga, 150gr pechuga a la plancha, crutones, queso parmesano y aderezo César.",
     price: 130,
     extraGroup: "food",
+    image: "/images/menu/ensalada-cesar.png",
   },
   {
     id: 16,
@@ -203,7 +209,7 @@ export const menuItems: MenuItem[] = [
     price: 135,
     extraGroup: "food",
     isRecommended: true,
-    image: "/images/menu/ensalada-2.png",
+    image: "/images/menu/ensalada-olivo.png",
   },
   {
     id: 17,
@@ -214,6 +220,7 @@ export const menuItems: MenuItem[] = [
     price: 140,
     extraGroup: "food",
     isFavorite: true,
+    image: "/images/menu/ensalada-balsamica.png",
   },
   {
     id: 18,
@@ -234,6 +241,7 @@ export const menuItems: MenuItem[] = [
       "Sándwich salado dulce con jamón y queso mozzarella, espolvoreado con azúcar glass y servido con mermelada de fresa y fresas naturales.",
     price: 145,
     extraGroup: "food",
+    image: "/images/menu/sandwich-montecristo.png",
   },
   {
     id: 20,
@@ -272,6 +280,7 @@ export const menuItems: MenuItem[] = [
       "Sándwich a base de lechuga, tomate, cebolla, aguacate, germinado; acompañado de papitas y aderezo.",
     price: 140,
     extraGroup: "food",
+    image: "/images/menu/sandwich-clasico-pollo.png",
   },
 
   // TACOS Y ESPECIALES
@@ -294,6 +303,7 @@ export const menuItems: MenuItem[] = [
     price: 145,
     extraGroup: "food",
     isRecommended: true,
+    image: "/images/menu/tacos-pastor.png",
   },
   {
     id: 26,
@@ -314,6 +324,7 @@ export const menuItems: MenuItem[] = [
     price: 160,
     extraGroup: "food",
     isFavorite: true,
+    image: "/images/menu/volcanes-cecina.png",
   },
   {
     id: 28,
@@ -324,6 +335,7 @@ export const menuItems: MenuItem[] = [
     price: 145,
     extraGroup: "food",
     isNew: true,
+    image: "/images/menu/volcanes-longaniza.png",
   },
   {
     id: 29,
@@ -332,6 +344,7 @@ export const menuItems: MenuItem[] = [
     price: 250,
     extraGroup: "food",
     isNew: true,
+    image: "/images/menu/cecina-con-chilaquiles.png",
   },
   {
     id: 30,
@@ -340,6 +353,7 @@ export const menuItems: MenuItem[] = [
     price: 190,
     extraGroup: "food",
     isNew: true,
+    image: "/images/menu/pollo-a-la-plancha.png",
   },
 
   // AGUAS Y REFRESCOS
@@ -429,6 +443,7 @@ export const menuItems: MenuItem[] = [
     name: "Café americano",
     price: 35,
     extraGroup: "drink",
+    image: "/images/menu/cafe-americano.png",
   },
   {
     id: 43,
@@ -436,6 +451,7 @@ export const menuItems: MenuItem[] = [
     name: "Café de olla",
     price: 40,
     extraGroup: "drink",
+    image: "/images/menu/cafe-de-olla.png",
   },
   {
     id: 44,
@@ -443,6 +459,7 @@ export const menuItems: MenuItem[] = [
     name: "Lechero",
     price: 60,
     extraGroup: "drink",
+    image: "/images/menu/cafe-lechero.png",
   },
   {
     id: 45,
@@ -450,6 +467,7 @@ export const menuItems: MenuItem[] = [
     name: "Capuchino",
     price: 60,
     extraGroup: "drink",
+    image: "/images/menu/capuchino.png",
   },
   {
     id: 46,
@@ -457,6 +475,7 @@ export const menuItems: MenuItem[] = [
     name: "Chai",
     price: 65,
     extraGroup: "drink",
+    image: "/images/menu/chai.png",
   },
   {
     id: 47,
@@ -464,6 +483,7 @@ export const menuItems: MenuItem[] = [
     name: "Chocolate",
     price: 65,
     extraGroup: "drink",
+    image: "/images/menu/chocolate.png",
   },
   {
     id: 48,
@@ -471,6 +491,7 @@ export const menuItems: MenuItem[] = [
     name: "Moka",
     price: 65,
     extraGroup: "drink",
+    image: "/images/menu/moka.png",
   },
   {
     id: 49,
@@ -478,6 +499,7 @@ export const menuItems: MenuItem[] = [
     name: "Caramel",
     price: 65,
     extraGroup: "drink",
+    image: "/images/menu/caramel.png",
   },
   {
     id: 50,
@@ -485,6 +507,7 @@ export const menuItems: MenuItem[] = [
     name: "Tisana",
     price: 65,
     extraGroup: "drink",
+    image: "/images/menu/tisana-frutos-rojos.png",
   },
 
   // BEBIDAS FRÍAS
@@ -575,7 +598,7 @@ export const menuItems: MenuItem[] = [
     name: "Caramel",
     price: 85,
     extraGroup: "drink",
-    image: "/images/menu/frappe-caramel-3.png",
+    image: "/images/menu/frappe-caramel.png",
   },
   {
     id: 64,
@@ -599,7 +622,7 @@ export const menuItems: MenuItem[] = [
     price: 85,
     extraGroup: "drink",
     isRecommended: true,
-    image: "/images/menu/frappe-avellana-2.png",
+    image: "/images/menu/frappe-avellana.png",
   },
   {
     id: 67,
@@ -615,6 +638,7 @@ export const menuItems: MenuItem[] = [
     name: "Horchata",
     price: 70,
     extraGroup: "drink",
+    image: "/images/menu/frappe-horchata.png",
   },
   {
     id: 69,
@@ -622,6 +646,7 @@ export const menuItems: MenuItem[] = [
     name: "Polvillo",
     price: 70,
     extraGroup: "drink",
+    image: "/images/menu/frappe-polvillo.png",
   },
   {
     id: 70,
@@ -629,6 +654,7 @@ export const menuItems: MenuItem[] = [
     name: "Pozol con cacahuate",
     price: 70,
     extraGroup: "drink",
+    image: "/images/menu/frappe-pozol-cacahuate.png",
   },
   {
     id: 71,
@@ -647,6 +673,7 @@ export const menuItems: MenuItem[] = [
       "Sabores: manzana-avena, fresa-plátano, plátano-cacahuate, plátano-avellana, plátano-moras, mango-maracuyá, piña-coco, fresa-coco.",
     price: 110,
     extraGroup: "drink",
+    image: "/images/menu/smoothie.png",
   },
 ];
 
