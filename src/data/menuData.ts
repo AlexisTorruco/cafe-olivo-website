@@ -147,7 +147,7 @@ export const menuItems: MenuItem[] = [
     description: "Servido con fresas y miel maple.",
     price: 135,
     extraGroup: "food",
-    image: "/images/menu/pan-frances-maple-fresa.png",
+    image: "/images/menu/pan-frances.png",
   },
 
   // WRAPS
@@ -251,6 +251,7 @@ export const menuItems: MenuItem[] = [
       "Sándwich de jamón y queso, bañados en una salsa de queso y coronado con un huevo estrellado; acompañado de ensalada.",
     price: 145,
     extraGroup: "food",
+    image: "/images/menu/sandwich-croque-madame.png",
   },
   {
     id: 21,
@@ -271,6 +272,7 @@ export const menuItems: MenuItem[] = [
     price: 140,
     extraGroup: "food",
     isRecommended: true,
+    image: "/images/menu/sandwich-huevo-con-tocino.png",
   },
   {
     id: 23,
