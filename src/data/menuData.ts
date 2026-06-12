@@ -138,7 +138,7 @@ export const menuItems: MenuItem[] = [
     price: 120,
     extraGroup: "food",
     isRecommended: true,
-    image: "/images/menu/molletes-con-cecina.png",
+    image: "/images/menu/molletes.png",
   },
   {
     id: 10,
